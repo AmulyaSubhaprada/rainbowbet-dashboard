@@ -21,7 +21,7 @@ function WithdrawData() {
       const { data, error, count } = await supabase
         .from('withdraws')
         .select('*', { count: 'exact' }) // Fetch data with total count
-        .eq('withdraw_status', 'Pending')
+        .eq('withdraw_status', 'Approved')
         .order('id', { ascending: false })
         .range(from, to);
   
@@ -89,24 +89,10 @@ function WithdrawData() {
         title: "Withdraw Status",
         dataIndex: "withdraw_status",
         key: "withdraw_status",
-      },
-      {
-        title: "Action",
-        key: "action",
-        
-           render: (_, record) => (
-                  <Button type="primary" onClick={() => handleAction(record)}>
-                    Action
-                  </Button>
-                ),
-      },
+      }
     ];
   
-    const handleAction = (record) => {
-      console.log('Action clicked for:', record);
-      navigation("/w-config",{ state: { record } });
-      // Add your logic here
-    };
+
   
     return (
      <div >

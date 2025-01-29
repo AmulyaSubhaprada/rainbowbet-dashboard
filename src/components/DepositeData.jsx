@@ -100,26 +100,10 @@ function DepositeData() {
         dataIndex: 'initiate_time',
         key: 'initiate_time',
         render: (text) => new Date(text).toLocaleString(),
-      },
-      {
-        title: 'Action',
-        key: 'action',
-        render: (_, record) => (
-          <Button type="primary" onClick={() => handleAction(record)}>
-            Action
-          </Button>
-        ),
-      },
+      }
     ];
   
-    // Handle action button click
-    const handleAction = (record) => {
-      console.log('Action clicked for:', record);
-      navigation("/d-config",{ state: { record } });
-      // Add your logic here
-    };
-  
-   console.log(depositedata)
+   
   
   
     return (
