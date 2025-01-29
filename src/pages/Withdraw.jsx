@@ -73,6 +73,11 @@ const WithdrawTable = () => {
       key: "user_id",
     },
     {
+      title: "User Name",
+      dataIndex: "user_name",
+      key: "user_name",
+    },
+    {
       title: "Withdraw Amount",
       dataIndex: "withdraw_amount",
       key: "withdraw_amount",

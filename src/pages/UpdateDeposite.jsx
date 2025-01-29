@@ -54,7 +54,7 @@ const updateDepositeTable=async()=>{
         
       } else{
         setIsLoading(false);
-        navigate("/deposite");
+        navigate("/deposit");
         toast.success("Update successfully");
       }                
 }

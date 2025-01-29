@@ -72,6 +72,11 @@ function Deposite() {
       key: 'user_id',
     },
     {
+      title: 'User Name',
+      dataIndex: 'user_name',
+      key: 'user_name',
+    },
+    {
       title: 'Deposit Amount',
       dataIndex: 'deposit_amount',
       key: 'deposit_amount',
